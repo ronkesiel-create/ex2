@@ -132,14 +132,21 @@ public class Map implements Map2D, Serializable {
 
         return x && y;
     }
-
+/**
+     * This method checks if a given map has the same dimensions as the current map
+     * @param p- a map to be checked on
+     * @return if both width and height of the 2 map are equal
+     */
     @Override
     public boolean sameDimensions(Map2D p) {
         boolean w = (_arr.length == p.getWidth());
         boolean h = (_arr[0].length == p.getHeight());
         return w && h;
     }
-
+/**
+     * This method duplicates a given map
+     * @param p- a map to be duplicated
+     */
     @Override
     public void addMap2D(Map2D p) {
         if (sameDimensions(p)) {
@@ -150,7 +157,10 @@ public class Map implements Map2D, Serializable {
             }
         }
     }
-
+/**
+     * This method draws A map given a scalar
+     * @param scalar- a multiplier number
+     */
     @Override
     public void mul(double scalar) {
         for (int i = 0; i < _arr.length; i++) {
@@ -165,7 +175,13 @@ public class Map implements Map2D, Serializable {
         _arr = new int[(int) (_arr.length * sx)][(int) (_arr[0].length * sy)];
         //what should I do with the content? waiting for answer.
     }
-
+/**
+     * This method draws A circle given a point of Pixel2D, a radius and A color
+     * @param canter- a point of Pixel2D
+     * @param color- the color number
+     * @param rad- the radius of the circle
+     * The method is using a new point (current) in order to see draw the circle given it's distance from center and radius
+     */
     @Override
     public void drawCircle(Pixel2D center, double rad, int color) {
         for (int i = 0; i < _arr.length; i++) {
@@ -183,7 +199,7 @@ public class Map implements Map2D, Serializable {
      * @param p1,p2- points of Pixel2D
      * @param color- the color number
      * The method get 2 new points with the help of p1,p2 in order to get the linear function
-     * 
+     * Draws the line with color using the linear function and the 2 given points
      */
     @Override
     public void drawLine(Pixel2D p1, Pixel2D p2, int color) {
