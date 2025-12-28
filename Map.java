@@ -123,7 +123,11 @@ public class Map implements Map2D, Serializable {
     public void setPixel(Pixel2D p, int v) {
         _arr[p.getX()][p.getY()] = v;
     }
-
+/**
+     * This method checks if a given point is on the current map
+     * @param p- a point to be checked on
+     * @return if both width and height of the 2 map are equal
+     */
     @Override
     public boolean isInside(Pixel2D p) {
 
