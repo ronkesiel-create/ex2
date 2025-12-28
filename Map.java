@@ -177,7 +177,6 @@ public class Map implements Map2D, Serializable {
     @Override
     public void rescale(double sx, double sy) {
         _arr = new int[(int) (_arr.length * sx)][(int) (_arr[0].length * sy)];
-        //what should I do with the content? waiting for answer.
     }
 /**
      * This method draws A circle given a point of Pixel2D, a radius and A color
