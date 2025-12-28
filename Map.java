@@ -224,7 +224,12 @@ public class Map implements Map2D, Serializable {
         }
 
     }
-
+ /**
+     * This method draws A
+     *
+     * @param ob
+     * @return True if ob is instanceof Map, False otherwise
+     */
     @Override
     public void drawRect(Pixel2D p1, Pixel2D p2, int color) {
         int minX = Math.min(p1.getX(), p2.getX());
@@ -238,7 +243,12 @@ public class Map implements Map2D, Serializable {
             }
         }
     }
-
+ /**
+     * This method checks whether the given object is equal to map type or not
+     *
+     * @param ob
+     * @return True if ob is instanceof Map, False otherwise
+     */
     @Override
     public boolean equals(Object ob) {
         if (!(ob instanceof Map)) {
