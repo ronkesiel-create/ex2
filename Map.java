@@ -225,10 +225,11 @@ public class Map implements Map2D, Serializable {
 
     }
  /**
-     * This method draws A
+     * This method draws A Rectangle given two points of Pixel2D and A color
      *
-     * @param ob
-     * @return True if ob is instanceof Map, False otherwise
+     * @param p1,p2- points of Pixel2D
+     * @param color- the color number
+     * The method get 2 new points with the help of p1,p2 in order to have 4 points to draw the Rectangle
      */
     @Override
     public void drawRect(Pixel2D p1, Pixel2D p2, int color) {
