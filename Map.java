@@ -177,7 +177,14 @@ public class Map implements Map2D, Serializable {
             }
         }
     }
-
+ /**
+     * This method draws A Line given two points of Pixel2D and A color
+     *
+     * @param p1,p2- points of Pixel2D
+     * @param color- the color number
+     * The method get 2 new points with the help of p1,p2 in order to get the linear function
+     * 
+     */
     @Override
     public void drawLine(Pixel2D p1, Pixel2D p2, int color) {
         int dx = Math.abs(p1.getX() - p2.getX());
@@ -229,7 +236,7 @@ public class Map implements Map2D, Serializable {
      *
      * @param p1,p2- points of Pixel2D
      * @param color- the color number
-     * The method get 2 new points with the help of p1,p2 in order to have 4 points to draw the Rectangle
+     * The method get 2 new points with the help of p1,p2 in order to draw the Rectangle
      */
     @Override
     public void drawRect(Pixel2D p1, Pixel2D p2, int color) {
